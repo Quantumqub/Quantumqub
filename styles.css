@@ -29,7 +29,6 @@ body {
 /* Header styles */
 header {
 	background-color: #ff6600;
-	/* Orange */
 	padding: 10px 0;
 	position: relative;
 	/* Ensure header appears above other content */
@@ -80,6 +79,9 @@ header nav a {
 	overflow: hidden;
 	/* Ensure nothing overflows outside the section */
 }
+.home-mobile{
+	background: #000000;
+}
 
 .home-content {
 	background: rgba(0, 0, 0, 0.6);
@@ -121,9 +123,10 @@ header nav a {
 /* Services Section styles */
 
 .intro-section {
-	height:100vh;
+	height: 100vh;
 	width: 100vw;
-	background: #FFC300;  ;
+	background: #FFC300;
+	;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -275,7 +278,7 @@ header nav a {
 }
 
 /* Staffing section */
-.staffing-section{
+.staffing-section {
 	height: 100vh;
 	width: 100vw;
 	background: url('https://plus.unsplash.com/premium_photo-1661427386261-8c0b6930bc6d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -289,7 +292,7 @@ header nav a {
 } */
 
 /* Payroll management section */
-.payroll-management-section{
+.payroll-management-section {
 	height: 100vh;
 	width: 100vw;
 	background: #FF4500;
@@ -300,7 +303,8 @@ header nav a {
 	justify-content: center;
 	align-items: center;
 }
-.payroll-management-content{
+
+.payroll-management-content {
 	/* max-width: 600px;
 	margin-top: 70px;
 	padding-left: 50px; */
@@ -310,6 +314,7 @@ header nav a {
 	justify-content: center;
 	align-items: center;
 }
+
 .payroll-management-content h2 {
 	font-size: 45px;
 	margin-bottom: 15px;
@@ -376,7 +381,7 @@ section {
 
 /* Talent-acquisition-section */
 
-.talent-acquisition-section{
+.talent-acquisition-section {
 	height: 100vh;
 	width: 100vw;
 	background: #40E0D0;
@@ -442,7 +447,7 @@ section {
 }
 
 /* Contact section styles */
-#contact{
+#contact {
 	display: flex;
 	gap: 40px;
 	justify-content: center;
@@ -614,7 +619,7 @@ button:hover {
 	/* Adjust height to fit elements */
 }
 
-.logo-section{
+.logo-section {
 	display: flex;
 	gap: 10px;
 	align-items: center;
@@ -669,4 +674,243 @@ button:hover {
 	justify-content: center;
 	color: white;
 	/* Text color */
+}
+
+/* Responsive desing */
+
+/* Responsiveness for header */
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	nav {
+		display: none;
+		/* Hide nav by default */
+		width: 100%;
+		/* Full width */
+		position: absolute;
+		/* Position absolute */
+		top: 100%;
+		/* Adjust based on your header height */
+		left: 0;
+		background-color: #ff6600;
+		/* Adjust as needed */
+		z-index: 10;
+		
+	}
+
+	nav.active {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		/* Show nav when active */
+	}
+
+	nav ul {
+		flex-direction: column;
+		/* Stack items vertically */
+	}
+
+	nav li {
+		margin: 5px 0;
+		/* Spacing for stacked items */
+	}
+
+	.hamburger {
+		display: block;
+		color: white;
+		font-size: 27px;
+		/* Show hamburger on mobile */
+	}
+}
+
+/* Responsivenes for home section and home content */
+
+@media (max-width: 600px) {
+	.home-section {
+		height: 600px;
+		/* Allow height to adjust based on content */
+		width: 100%;
+		background-size: contain;
+		margin-top: 40px;
+	}
+
+	.home-mobile{
+		background: #000000;
+	}
+
+	.home-content {
+		padding: 0px;
+		/* Adjust padding for smaller screens */
+		max-width: 100%;
+		/* Ensure full width on mobile */
+	}
+
+	.home-content h2 {
+		font-size: 36px;
+		/* Adjust font size for smaller screens */
+	}
+
+	.home-content h3 {
+		font-size: 18px;
+		/* Adjust font size for smaller screens */
+	}
+}
+
+/* Responsive code for intro content */
+
+@media (max-width: 600px) {
+	.intro-section {
+		height: 500px;
+		/* Allow height to adjust based on content */
+		padding: 0px;
+		/* Adjust padding */
+		
+	}
+
+	.intro-content {
+		padding: 15px;
+		/* Adjust padding for smaller screens */
+		max-width: 100%;
+		/* Full width on mobile */
+		margin-top:120px
+	}
+
+	.intro-content h2 {
+		font-size: 30px;
+		/* Smaller font size for mobile */
+	}
+
+	.intro-content p {
+		font-size: 18px;
+		/* Smaller font size for mobile */
+	}
+
+	.cta-button {
+		padding: 10px 22px;
+		/* Adjust button padding for smaller screens */
+		font-size: 20px;
+	}
+}
+
+/* Responsiveness for payroll mangement */
+
+@media (max-width: 600px) {
+	.payroll-management-section {
+		height: 500px;
+		/* Allow height to adjust based on content */
+		padding: 0px;
+		/* Adjust padding */
+	}
+
+	.payroll-management-content {
+		padding: 15px;
+		/* Adjust padding for smaller screens */
+		max-width: 100%;
+		/* Full width on mobile */
+	}
+
+	.payroll-management-content h2 {
+		font-size: 30px;
+		/* Smaller font size for mobile */
+	}
+
+	.payroll-management-content p {
+		font-size: 18px;
+		/* Smaller font size for mobile */
+	}
+
+	.cta-button {
+		padding: 10px 22px;
+		/* Adjust button padding for smaller screens */
+		font-size: 20;
+	}
+}
+
+/* Responsiveness for talent aquasition */
+
+@media (max-width: 600px) {
+	.talent-acquisition-section {
+		height: 500px;
+		/* Allow height to adjust based on content */
+		padding: 0px;
+		/* Adjust padding */
+	}
+
+	.talent-acquisition-content {
+		padding: 15px;
+		/* Adjust padding for smaller screens */
+		max-width: 100%;
+		/* Full width on mobile */
+	}
+
+	.talent-acquisition-content h2 {
+		font-size: 30px;
+		/* Smaller font size for mobile */
+	}
+
+	.talent-acquisition-content p {
+		font-size: 18px;
+		/* Smaller font size for mobile */
+	}
+
+	.cta-button {
+		padding: 10px 22px;
+		/* Adjust button padding for smaller screens */
+		font-size: 22px;
+	}
+}
+
+/* Responsiveness for map contact adress seciton */
+
+@media (max-width: 600px) {
+	
+	#contact img {
+		max-width: 100%;
+		margin-top: 35px;
+		/* Full width on mobile */
+	}
+}
+
+/* Responsiveness for footer */
+
+@media (max-width: 600px) {
+	.footer-container{
+		text-align: center;
+		font-size: large;
+	}
+	.footer-logo {
+		margin-left: 55px;
+	}
+	.copyright{
+		margin-left: 25px;
+	}
+
+}
+
+/* Responsivenss for staffic section page */
+
+@media (max-width: 600px) {
+	.staffing-section{
+		background-size: contain;
+		background-color: #f8f8ff;
+		height: 400px;
+	}
+	.intro-content{
+		margin-top: 200px;
+		color: black;
+	}
+	.service-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/*Responsiveness for payroll section  */
+@media (max-width: 600px) {
+.benefits-section {
+	background-color: #f4f4f4;
+}
 }

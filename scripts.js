@@ -1,2 +1,6 @@
-// JavaScript code can be added here if needed
-// For now, it's empty but can be used for interactive features
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+	nav.classList.toggle('active');
+});
